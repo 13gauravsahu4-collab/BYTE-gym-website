@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your gym session online. Twenty mats per hour, instant codes, automatic waitlist." />
+  <title>Pulse Fitness Club &mdash; Book your hour</title>
+  <link rel="stylesheet" href="style.css?v=4" />
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#/"><span class="brand-mark"></span><span class="brand-text">PULSE<small>Fitness Club</small></span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="nav-link" data-page="home" href="#/">Home</a>
+      <a class="nav-link" data-page="book" href="#/book">Book</a>
+      <a class="nav-link" data-page="mine" href="#/mine">My bookings <span class="count" id="mineCount">0</span></a>
+      <a class="nav-link" data-page="help" href="#/help">Help</a>
+      <a class="nav-link" data-page="staff" href="#/staff">Staff</a>
+      <a class="btn small nav-cta" href="#/book">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<div class="banner" id="banner" hidden>Cannot reach the booking server. Start it with <b>cd backend &amp;&amp; node server.js</b>, then open <b>http://localhost:3000</b></div>
+<div class="banner crash" id="crash" hidden></div>
+
+<main>
+
+  <!-- ================================================== HOME -->
+  <section class="page home" data-page="home">
+
+    <div class="hero">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Hourly sessions &middot; 20 mats each</p>
+        <h1>LET'S GET<br />MOVING</h1>
+        <p class="hero-sub">THE EASIEST WAY TO RESERVE YOUR HOUR</p>
+        <div class="hero-actions">
+          <a class="btn big" href="#/book">Book a session</a>
+          <a class="btn big outline" href="#/mine">My bookings</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><span class="stat-value" id="statToday">-</span><span class="stat-label">Sessions with mats left today</span></div>
+        <div class="stat"><span class="stat-value" id="statNext">-</span><span class="stat-label">Next open session</span></div>
+        <div class="stat"><span class="stat-value" id="statMats">20</span><span class="stat-label">Mats in every session</span></div>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="split-visual"><span class="big-num">20</span><span class="big-cap">MATS PER HOUR</span></div>
+      <div class="split-text">
+        <h2 class="display">WELCOME</h2>
+        <p class="kicker">TO PULSE FITNESS CLUB</p>
+        <p>Training here is not about queues and crowded floors. Every hourly session has exactly twenty mats, so you always have space to move and a trainer who can give you attention.</p>
+        <p>Reserve your hour in seconds. You get a personal code, show it at the door and you are in. If the session is full, join the waitlist and we book you automatically the moment a mat frees up.</p>
+        <a class="btn outline" href="#/book">See today's sessions</a>
+      </div>
+    </div>
+
+    <div class="band"><p>"WHAT SEEMS IMPOSSIBLE TODAY WILL SOON BECOME YOUR WARM-UP"</p></div>
+
+    <div class="programs">
+      <div class="wrap">
+        <h2 class="display center">POPULAR WORKOUT PROGRAMS</h2>
+        <p class="lead center">Whatever your goal, pick an hour that suits you and train at your own pace on your own mat.</p>
+        <div class="program-grid">
+          <div class="program"><span class="pnum">1</span><h3>Strength training</h3></div>
+          <div class="program"><span class="pnum">2</span><h3>Posture and mobility</h3></div>
+          <div class="program"><span class="pnum">3</span><h3>Muscle tone</h3></div>
+          <div class="program"><span class="pnum">4</span><h3>Weight loss</h3></div>
+          <div class="program"><span class="pnum">5</span><h3>Cardio fitness</h3></div>
+          <div class="program"><span class="pnum">6</span><h3>Core strength</h3></div>
+        </div>
+        <p class="center"><a class="btn big" href="#/book">Book a session</a></p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h2 class="display center spaced">HOW IT WORKS</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><h3>Pick an hour</h3><p>See live mat counts for today and the next two days.</p></div>
+        <div class="step"><span class="step-num">2</span><h3>Get your code</h3><p>Mat free? You are in and get a 6-letter code. Full? You join the waitlist.</p></div>
+        <div class="step"><span class="step-num">3</span><h3>Show it at the door</h3><p>Staff check you in with your code. Cancel anytime and the next person moves up.</p></div>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <div class="wrap">
+        <h2 class="display center">MEMBER REVIEWS</h2>
+        <div class="review-grid">
+          <blockquote><p>Booking takes ten seconds and I never worry about a crowded floor. The waitlist is a lifesaver.</p><cite>Aarav S.</cite></blockquote>
+          <blockquote><p>I got a mat in my favourite 7 AM class the moment someone cancelled. No refreshing, it just told me.</p><cite>Meera K.</cite></blockquote>
+          <blockquote><p>Simple, fast and the check-in at the door is smooth. Exactly what a gym app should be.</p><cite>Rohan T.</cite></blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="visit">
+        <div>
+          <h2 class="display">VISIT US</h2>
+          <p>123 Fitness Street, Your City</p>
+          <p>Open daily 6:00 AM &ndash; 10:00 PM</p>
+          <p>Tel: 000 000 0000</p>
+        </div>
+        <div class="visit-cta">
+          <p class="lead">Ready to train?</p>
+          <a class="btn big" href="#/book">Book your hour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================== BOOK -->
+  <section class="page" data-page="book" hidden>
+    <div class="wrap">
+      <h1 class="page-title">Book a session</h1>
+      <p class="muted"><span class="live-dot"></span><span id="liveStamp">Connecting...</span></p>
+
+      <div class="day-tabs" id="dayTabs" role="tablist"></div>
+
+      <div class="filters">
+        <div class="chips" id="periodChips" role="group" aria-label="Time of day">
+          <button class="chip active" data-period="all">All day</button>
+          <button class="chip" data-period="morning">Morning</button>
+          <button class="chip" data-period="afternoon">Afternoon</button>
+          <button class="chip" data-period="evening">Evening</button>
+        </div>
+        <label class="switch"><input type="checkbox" id="onlyOpen" /> Only sessions with free mats</label>
+      </div>
+
+      <div id="sessions"></div>
+    </div>
+  </section>
+
+  <!-- ================================================== MINE -->
+  <section class="page" data-page="mine" hidden>
+    <div class="wrap">
+      <h1 class="page-title">My bookings</h1>
+      <p class="muted">Waitlisted? This page updates by itself when you get a mat.</p>
+      <div id="mine"></div>
+    </div>
+  </section>
+
+  <!-- ================================================== HELP -->
+  <section class="page" data-page="help" hidden>
+    <div class="wrap">
+      <h1 class="page-title">Help and rules</h1>
+      <div class="faq">
+        <details open><summary>How many people fit in a session?</summary><p>Exactly 20. The server counts every booking, so a 21st person always goes to the waitlist.</p></details>
+        <details><summary>What is the waitlist?</summary><p>When all 20 mats are taken you can still join. You get a position number. Whoever joined first is booked first.</p></details>
+        <details><summary>How do I get booked from the waitlist?</summary><p>You do not need to do anything. When someone cancels, the next person in the queue is booked automatically and sees their code on My bookings.</p></details>
+        <details><summary>What is the code for?</summary><p>Show your 6-letter code to staff at the door. Each code works once.</p></details>
+        <details><summary>Can I cancel?</summary><p>Yes, from My bookings, any time before you are checked in. Your mat goes straight to the next person.</p></details>
+        <details><summary>Why is my booking gone after I cleared my browser?</summary><p>Your bookings are tied to this browser. Clearing site data removes that link, so keep your code safe.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================== STAFF -->
+  <section class="page" data-page="staff" hidden>
+    <div class="wrap">
+      <h1 class="page-title">Staff check-in</h1>
+      <div class="panel narrow">
+        <form id="checkinForm" novalidate>
+          <label class="field">Staff key
+            <input id="keyInput" type="password" autocomplete="off" />
+          </label>
+          <label class="field">Member code
+            <input id="codeInput" class="code-input" maxlength="6" placeholder="ABC234" autocomplete="off" />
+          </label>
+          <button class="btn" type="submit">Check in</button>
+        </form>
+        <div class="result" id="checkinResult" hidden></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div><strong>PULSE Fitness Club</strong><p>Hourly sessions, 20 mats each.</p></div>
+    <div class="footer-links"><a href="#/book">Book</a><a href="#/mine">My bookings</a><a href="#/help">Help</a><a href="#/staff">Staff</a></div>
+    <p class="copy">&copy; 2026 Pulse Fitness Club</p>
+  </div>
+</footer>
+
+<!-- book dialog -->
+<div class="modal" id="nameModal" hidden role="dialog" aria-modal="true" aria-labelledby="nameTitle">
+  <div class="modal-backdrop" data-close></div>
+  <form class="modal-box" id="nameForm" novalidate>
+    <h2 id="nameTitle">Confirm your booking</h2>
+    <p class="muted" id="nameSlot"></p>
+    <label class="field">Your name
+      <input id="nameInput" maxlength="40" autocomplete="name" placeholder="e.g. Gaurav" />
+    </label>
+    <p class="field-error" id="nameError" hidden>Please enter your name.</p>
+    <div class="modal-actions">
+      <button type="button" class="btn ghost" data-close>Not now</button>
+      <button type="submit" class="btn" id="nameSubmit">Confirm booking</button>
+    </div>
+  </form>
+</div>
+
+<!-- cancel dialog -->
+<div class="modal" id="cancelModal" hidden role="dialog" aria-modal="true" aria-labelledby="cancelTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box">
+    <h2 id="cancelTitle">Cancel this booking?</h2>
+    <p class="muted" id="cancelSlot"></p>
+    <div class="modal-actions">
+      <button type="button" class="btn ghost" data-close>Keep it</button>
+      <button type="button" class="btn danger" id="cancelYes">Yes, cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- result dialog -->
+<div class="modal" id="resultModal" hidden role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box center">
+    <div class="result-icon" id="resultIcon">&#10003;</div>
+    <h2 id="resultTitle"></h2>
+    <p class="muted" id="resultSlot"></p>
+    <div class="code" id="resultCode" hidden></div>
+    <p class="muted" id="resultNote"></p>
+    <div class="modal-actions center">
+      <button type="button" class="btn ghost" data-close>Close</button>
+      <a class="btn" href="#/mine" data-close>View my bookings</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+
+<script src="app.js?v=4"></script>
+</body>
+</html>
